@@ -1,0 +1,25 @@
+input[type="text"]{
+    color: #1b1d26;
+    font-style: oblique;
+}
+input[type="number"]{
+    color: #1b1d26;
+    font-style: oblique;
+}
+input[type="email"]{
+    color: #1b1d26;
+    font-style: oblique;
+}
+input[type="password"]{
+    color: #1b1d26;
+    font-style: oblique;
+}
+input[type="submit"]{
+    font-weight: bold;
+}
+body{
+    background-color: #0b77b7;
+    padding: 1em;
+    font-family: Arial;
+    font-size: 20px;
+}
