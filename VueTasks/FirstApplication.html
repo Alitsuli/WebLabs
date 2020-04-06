@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Tehtävä 1 -->
     <!-- kehitysversio, jossa hyödyllistä infoa konsolissa -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- tuotantoversio -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Vue Hello World!</title>
 </head>
 <body>
-<div id="app">
-    {{ message }}
-</div>
+    <div id="world">
+    <input type="text" v-model="message" placehoolder="Hello World!">
+    <p>
+        Message: {{message}}
+    </p>
+    </div>
 <script>
-    var app = new Vue({
-        el: '#app',
-        data: {
-            message: 'Heippa!'
+    let app = new Vue({
+        el: "#world",
+        data:{
+            message:'',
         }
     })
 </script>
