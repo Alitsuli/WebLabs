@@ -13,12 +13,22 @@
     <p>
         Message: {{message}}
     </p>
+    <!-- Tehtävä 5 -->
+    <p>
+        Characters: {{charCount}}
+    </p>
     </div>
 <script>
     let app = new Vue({
         el: "#app-1",
         data:{
             message:'',
+        },
+        <!-- Tehtävä 5 -->
+        computed: {
+            charCount:function() {
+                return this.message.length;
+            }
         }
     })
 </script>
