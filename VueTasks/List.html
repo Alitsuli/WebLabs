@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <!-- Tehtävä 4,6,7 -->
+        <meta charset="UTF-8">
+        <title>List</title>
+        <!-- kehitysversio, jossa hyödyllistä infoa konsolissa -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+</head>
+<body>
+<div id="todo">
+    <h3>TO DO List</h3>
+    <form v-on:submit.prevent="additem">
+        <input type="text" v-model="text">
+        <button type="submit">Add</button>
+        <button type="button" v-on:click="deleteItem">Delete</button>
+    </form>
+    <ul>
+        <li v-for="(item, index) in items">
+            {{item.message}}
+            <button v-on:click="deleteItem2(index)">Delete This</button>
+        </li>
+    </ul>
+</div>
+
+<script>
+    let listApp = new Vue({
+        el: "#todo",
+        data:{
+            items:[
+            ],
+            text: ''
+        },
+        methods:{
+            additem: function() {
+                let newItem = {
+                    message: this.text
+                };
+
+                this.items.push(newItem);
+            },
+            deleteItem: function() {
+                this.items.shift();
+            },
+            deleteItem2: function(index){
+                this.items.splice(index, 1);
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
