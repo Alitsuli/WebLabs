@@ -4,6 +4,7 @@
 
             <label>Employee Name</label>
             <input
+                    ref="first"
                     v-model="employee.name"
                     type="text"
                     :class="{ 'has-error': submitting && invalidName }"
@@ -56,6 +57,7 @@
                 }
 
                 this.$emit('add:employee', this.employee)
+                this.$refs.first.focus()
                 this.employee = {
                     name: '',
                     email: '',
